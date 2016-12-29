@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/egkoppel/travis-branch-radiator.svg?branch=master)](https://travis-ci.org/egkoppel/travis-branch-radiator)
 # Travis branch radiator
 Travis branch build status radiator/dashboard.
 
