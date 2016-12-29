@@ -1,0 +1,28 @@
+<html>
+
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Travis Branch radiator</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css' />
+    <link href="radiator.css" rel="stylesheet" type='text/css' />
+    <script type="text/javascript" src="dist/radiator.js"></script>
+  </head>
+
+  <body>
+    <div id="app"></div>
+  </body>
+
+  <script type="text/javascript">
+    ;(function() {
+      var localStorageKey = 'radiatorConfig'
+      var savedConfiguration = localStorage.getItem(localStorageKey)
+      var config = savedConfiguration ? JSON.parse(savedConfiguration) : null
+      var appElem = document.getElementById('app');
+      var app = Elm.RadiatorApp.embed(appElem, { localStorageCfg: config })
+      app.ports.saveConfiguration.subscribe(function(newConfig) {
+        localStorage.setItem(localStorageKey, JSON.stringify(newConfig))
+        })
+      })()
+    </script>
+
+  </html>
