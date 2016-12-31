@@ -32,7 +32,7 @@
 }
     ;(function() {
       var title = getQueryVariable("title");
-      var localStorageKey = 'radiatorConfig'
+      var localStorageKey = 'radiatorConfig-' + title;
       var savedConfiguration = localStorage.getItem(localStorageKey)
       var config = savedConfiguration ? JSON.parse(savedConfiguration) : null
       var appElem = document.getElementById('app');
