@@ -32,7 +32,7 @@
 }
     ;(function() {
       var title = getQueryVariable("title");
-      document.getElementById("titleText").innerHTML = title;
+      document.getElementById("titleText").innerHTML = title + " | Travis CI";
       var localStorageKey = 'radiatorConfig-' + title;
       var savedConfiguration = localStorage.getItem(localStorageKey)
       var config = savedConfiguration ? JSON.parse(savedConfiguration) : null
