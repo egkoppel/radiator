@@ -2,7 +2,7 @@
 
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Radiator | Main</title>
+    <title>Radiator</title>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css' />
     <link href="radiator.css" rel="stylesheet" type='text/css' />
     <script type="text/javascript" src="dist/radiator.js"></script>
@@ -10,7 +10,7 @@
 
   <body>
   <div style="height: 10%;">
-  <h1 style="font-family: 'Open Sans', sans-serif;color:white;text-align:center;">Main</h1>
+  <h1 style="font-family: 'Open Sans', sans-serif;color:white;text-align:center;" id="title">Radiator</h1>
   </div>
   <div style="height: 90%;">
   <div id="app"></div>
@@ -32,6 +32,8 @@
 }
     ;(function() {
       var title = getQueryVariable("title");
+      var titleId = document.getElementById('title');
+      titleId.innerHtml = title;
       var localStorageKey = 'radiatorConfig-' + title;
       var savedConfiguration = localStorage.getItem(localStorageKey)
       var config = savedConfiguration ? JSON.parse(savedConfiguration) : null
