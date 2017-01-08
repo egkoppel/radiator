@@ -6,5 +6,3 @@ branches:
   only:
   - master
 
-script:
-  - echo "Hi"
